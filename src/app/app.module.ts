@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,48 @@ import { SearchComponent } from './search/search.component';
 import { DeleteComponent } from './delete/delete.component';
 import { EditComponent } from './edit/edit.component';
 import { EntryComponent } from './entry/entry.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const myRoute:Routes=[
+  {
+     path:"",
+     component:AdminloginComponent
+  },
+  {
+    path:"userlogin",
+    component:UserloginComponent
+  },
+  {
+    path:"userreg",
+    component:UserregComponent
+  },
+  {
+    path:"issuebook",
+    component:BookissueComponent
+  },
+  {
+    path:"bookview",
+    component:BookviewComponent
+  },
+  {
+    path:"booksearch",
+    component:SearchComponent
+  },
+  {
+    path:"bookentry",
+    component:EntryComponent
+  },
+  {
+    path:"bookedit",
+    component:EditComponent
+    
+  },
+  {
+    path:"delete",
+    component:DeleteComponent
+  },
+  
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +69,8 @@ import { EntryComponent } from './entry/entry.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
