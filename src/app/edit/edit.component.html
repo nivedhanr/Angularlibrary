@@ -6,8 +6,8 @@
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Booktitle</label>
-                    <input type="text" class="form-control">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
+                    <button (click)="readValues()" class="btn btn-outline-primary" type="submit">Search</button>
     
                 </div>
             </div>

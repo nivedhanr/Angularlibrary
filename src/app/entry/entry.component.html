@@ -11,7 +11,7 @@
 
                     <label for="" class="form-label">Book Title</label>
 
-                    <input type="text" class="form-control">
+                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
                     
 
                 </div>
@@ -20,7 +20,7 @@
 
                     <label class="form-label">Author</label>
 
-                    <input type="text" class="form-control">
+                    <input name="author" [(ngModel)]="author" type="text" class="form-control">
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-                    <textarea name="" id="" cols="160" rows="2"></textarea>
+                    <textarea name="description" [(ngModel)]="description" id="" cols="160" rows="2"></textarea>
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-                    <input type="text" class="form-control">
+                    <input name="publisher" [(ngModel)]="publisher" type="text" class="form-control">
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-                    <input type="text" class="form-control">
+                    <input name="language" [(ngModel)]="language" type="text" class="form-control">
 
 
 
@@ -70,7 +70,7 @@
 
 
 
-                    <input type="text" class="form-control">
+                    <input name="distributor" [(ngModel)]="distributor" type="text" class="form-control">
 
 
 
@@ -82,7 +82,7 @@
 
 
 
-                    <input type="text" class="form-control">
+                    <input name="releasedyear" [(ngModel)]="releasedyear" type="text" class="form-control">
 
 
 
@@ -94,7 +94,7 @@
 
 
 
-                    <input type="text" class="form-control">
+                    <input name="price" [(ngModel)]="price" type="text" class="form-control">
 
 
 
@@ -106,7 +106,7 @@
 
 
 
-                    <input type="file" name="" id="" class="form-control">
+                    <input name="image" [(ngModel)]="image" type="file" name="" id="" class="form-control">
 
 
 
@@ -117,7 +117,7 @@
 
                    
 
-                    <button class="btn btn-success">Add</button>
+                    <button (click)="readValues()" class="btn btn-success">Add</button>
 
 
 
