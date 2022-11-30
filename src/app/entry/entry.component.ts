@@ -15,7 +15,7 @@ export class EntryComponent {
   releasedyear=""
   title=""
   price=""
-
+  
 
   readValues=()=>
   {

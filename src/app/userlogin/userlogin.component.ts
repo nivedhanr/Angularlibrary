@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-userlogin',
@@ -8,13 +9,15 @@ import { Component } from '@angular/core';
 export class UserloginComponent {
   username=""
   password=""
+  constructor(private route:Router){}
  
   readValues=()=>
   {
     let data:any={"username":this.username,"password":this.password}
     console.log(data)
 
-    if (this.username=="admin" && this.password=="12345") {
+    if (this.username=="user" && this.password=="12345") {
+      this.route.navigate(['/bookview'])
 
       alert("valid credential")
       
