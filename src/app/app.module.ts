@@ -15,7 +15,9 @@ import { EntryComponent } from './entry/entry.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { TableviewComponent } from './tableview/tableview.component';
+import { NavadminComponent } from './navadmin/navadmin.component'
 
 const myRoute:Routes=[
   {
@@ -55,6 +57,15 @@ const myRoute:Routes=[
     path:"delete",
     component:DeleteComponent
   },
+  {
+    path:"nav",
+    component:NavbarComponent
+  },
+  {
+    path:"tableview",
+    component:TableviewComponent
+
+  }
   
 ]
 @NgModule({
@@ -69,7 +80,9 @@ const myRoute:Routes=[
     DeleteComponent,
     EditComponent,
     EntryComponent,
-    NavbarComponent
+    NavbarComponent,
+    TableviewComponent,
+    NavadminComponent
   ],
   imports: [
     BrowserModule,
