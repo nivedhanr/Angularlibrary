@@ -1,16 +1,62 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+    <div class="row g-3 mt-4">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">
 
             <div class="row g-3 mt-4">
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  text-center">
                     <label for="" class="form-label">Booktitle</label>
                     <input name="title" [(ngModel)]="title" type="text" class="form-control">
-                    <button (click)="readValues()"class="btn btn-outline-primary" type="submit">Search</button>
+                    <button (click)="readValue()"class="btn btn-outline-primary" type="submit">Search</button>
     
                 </div>
             </div>
+            <div class="row" ></div>
+
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                <table class="table">
+
+                    <thead>
+
+                      <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Image</th>
+
+                        <th scope="col">Author</th>
+
+                        <th scope="col">Language</th>
+
+                        <th scope="col">Price</th>
+
+                      </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                      <tr *ngFor="let i of fetchsearch">
+                        <td>{{i.title}}</td>
+                        <td><img  src="{{i.image}}" class="card-img-top" alt="..."></td>
+
+                        <td>{{i.author}}</td>
+
+                        <td>{{i.language}}</td>
+
+                        <td>{{i.price}}</td>
+
+                      </tr>
+
+                     
+
+                    </tbody>
+
+                  </table>
+
+
+
+
+        </div>
 
         </div>
     </div>
