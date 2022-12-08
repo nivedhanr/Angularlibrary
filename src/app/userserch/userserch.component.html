@@ -1,0 +1,126 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3 mt-4">
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label">Book Title</label>
+
+                    <input name="title" [(ngModel)]="title"type="text" class="form-control">
+
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xl-12 col-xxl-12 text-center">
+
+                    <button (click)="readValue()" class="btn btn-success">search</button>
+
+                </div>
+
+        </div>
+        <div class="row g-3 mt-5" *ngFor="let j of readValues">
+
+
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            
+             
+            
+                <label for="" class="form-label">Author</label>
+            
+                <input  type="text" class="form-control" value="{{j.author}}">
+            
+              </div>
+            
+             
+            
+               
+            
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            
+             
+            
+               
+            
+             
+            
+                            <label for="" class="form-label">Description</label>
+            
+             
+            
+               
+            
+                           <textarea name="" id="" cols="30" rows="10" class="form-control" value="{{j.description}}"></textarea>
+            
+                             </div>
+            
+                           
+                        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                            <label for="" class="form-label">Language</label>
+               
+               
+                            <input type="text" class="form-control" value="{{j.language}}">
+               
+               
+                        </div>
+               
+               
+                        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+               
+                            <label for="" class="form-label">Distributor</label>
+               
+               
+                            <input  type="text" class="form-control" value="{{j.distributor}}">
+               
+               
+                        </div>
+               
+                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+               
+                
+               
+                       <label for="" class="form-label">Released Year</label>
+               
+                
+               
+                
+               
+                      <input  type="text" class="form-control" value="{{j.year}}">
+
+                    </div>
+
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+           
+                    <label for="" class="form-label">Price</label>
+           
+                   <input  type="text" class="form-control" value="{{j.price}}">
+           
+                   </div>
+           
+           
+           
+                   <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+           
+                       <label for="" class="form-label">Book Image</label>
+           
+                      <input  type="text" class="form-control" value="{{j.image}}">
+           
+                      </div>
+           
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+           
+                  <button (click)="deleteBtnclick(j.id)" class="btn btn-success">Delete</button>
+           
+                    </div>
+           
+            
+           
+            </div>
+           
+            </div>
+           
+            </div>

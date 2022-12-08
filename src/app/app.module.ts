@@ -17,7 +17,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TableviewComponent } from './tableview/tableview.component';
-import { NavadminComponent } from './navadmin/navadmin.component'
+import { NavadminComponent } from './navadmin/navadmin.component';
+import { NavuserComponent } from './navuser/navuser.component';
+import { UserserchComponent } from './userserch/userserch.component'
 
 const myRoute:Routes=[
   {
@@ -65,6 +67,10 @@ const myRoute:Routes=[
     path:"tableview",
     component:TableviewComponent
 
+  },
+  {
+    path:"usersearch",
+    component:UserserchComponent
   }
   
 ]
@@ -82,7 +88,9 @@ const myRoute:Routes=[
     EntryComponent,
     NavbarComponent,
     TableviewComponent,
-    NavadminComponent
+    NavadminComponent,
+    NavuserComponent,
+    UserserchComponent
   ],
   imports: [
     BrowserModule,

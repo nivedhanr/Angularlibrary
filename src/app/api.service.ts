@@ -22,4 +22,14 @@ fetchsearch=(datatosend:any)=>
 deletebook=(datatosend:any)=>{
   return this.http.post("http://localhost:8080/delete",datatosend)
 }
+
+  userLogin=(datatosend: any)=>{
+  
+  return this.http.post("http://localhost:8080/userlogin", datatosend)
+}
+userReg=(datatosend: any)=>{
+  
+  return this.http.post("http://localhost:8080/userreg", datatosend)
+}
+
 }
