@@ -18,7 +18,7 @@ export class UserregComponent {
   username=""
   password=""
   confirmpass=""
- constructor(private api:ApiService,private route:Router){}
+ constructor(private api:ApiService){}
 
   readValues=()=>
   {
@@ -40,7 +40,7 @@ export class UserregComponent {
             this.username=""
             this.password=""
             this.confirmpass=""
-            this.route.navigate(['/userlogin'])
+            // this.route.navigate(['/userlogin'])
 
           }else{
             alert("Something went wrong")

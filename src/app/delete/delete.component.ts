@@ -8,5 +8,11 @@ import { ApiService } from '../api.service';
   styleUrls: ['./delete.component.css']
 })
 export class DeleteComponent {
-  
+  title=""
+  readValue=()=>
+  {
+    let data:any={
+      "title"
+    }
+  }
 }
