@@ -8,11 +8,23 @@ import { ApiService } from '../api.service';
   styleUrls: ['./delete.component.css']
 })
 export class DeleteComponent {
-  title=""
-  readValue=()=>
-  {
-    let data:any={
-      "title"
-    }
-  }
+//  constructor(private api:ApiService){}
+//   title=""
+//   readValue=()=>
+//   {
+//     let data:any={
+//       "title":this.title}
+//       console.log(data)
+//       this.api.readValues(data).subscribe(
+//         (response:any)=>{
+//           console.log(response)
+//           if (response.length==0) {
+//             alert("invalid book delete")
+//           } else {
+//             this.readValues= response
+//           }
+//         }
+//       )
+//     }
+//   }
 }

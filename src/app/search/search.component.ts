@@ -28,5 +28,20 @@ export class SearchComponent {
       }
     )
   }
+  deleteBtnclick=(id:any)=>{
+    let data:any={"id":id}
+    this.api.deletebook(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if(response.status=="success"){
+          alert("successfully deleted")
+          this.fetchsearch=[]
+        }
+        else{
+          alert("invalid input")
+        }
+      }
+    )
+  }
 
 }
